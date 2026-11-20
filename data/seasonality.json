@@ -1,0 +1,1137 @@
+{
+  "generatedAt": "2026-11-16",
+  "snapshotCount": 17,
+  "dateRange": {
+    "from": "2026-01-19",
+    "to": "2026-11-16"
+  },
+  "years": [
+    2026,
+    2027,
+    2028
+  ],
+  "priceBasis": "Lowest priced stateroom for two guests, including taxes and fees, on each snapshot.",
+  "caveat": "Unofficial fan tracker. DCL Guide does not sell cruises. Verify the live fare and book on Disney Cruise Line at https://disneycruise.disney.go.com.",
+  "officialUrl": "https://disneycruise.disney.go.com",
+  "regions": {
+    "us": {
+      "label": "U.S. homeports",
+      "sailingCount": 1009,
+      "months": [
+        {
+          "month": "2026-02",
+          "sailingCount": 22,
+          "medianLowestFare": 3176,
+          "medianPerNight": 703,
+          "cheapest": {
+            "sailDate": "2026-02-25",
+            "ship": "Disney Magic",
+            "nights": 4,
+            "homeport": "Galveston",
+            "price": 1576,
+            "perNight": 394
+          }
+        },
+        {
+          "month": "2026-03",
+          "sailingCount": 50,
+          "medianLowestFare": 2782,
+          "medianPerNight": 641,
+          "cheapest": {
+            "sailDate": "2026-03-06",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Fort Lauderdale",
+            "price": 1444,
+            "perNight": 481
+          }
+        },
+        {
+          "month": "2026-04",
+          "sailingCount": 44,
+          "medianLowestFare": 2633,
+          "medianPerNight": 648,
+          "cheapest": {
+            "sailDate": "2026-04-17",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1484,
+            "perNight": 495
+          }
+        },
+        {
+          "month": "2026-05",
+          "sailingCount": 31,
+          "medianLowestFare": 3337,
+          "medianPerNight": 727,
+          "cheapest": {
+            "sailDate": "2026-05-07",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1923,
+            "perNight": 481
+          }
+        },
+        {
+          "month": "2026-06",
+          "sailingCount": 26,
+          "medianLowestFare": 4344,
+          "medianPerNight": 977,
+          "cheapest": {
+            "sailDate": "2026-06-07",
+            "ship": "Disney Fantasy",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2517,
+            "perNight": 839
+          }
+        },
+        {
+          "month": "2026-07",
+          "sailingCount": 25,
+          "medianLowestFare": 4274,
+          "medianPerNight": 946,
+          "cheapest": {
+            "sailDate": "2026-07-31",
+            "ship": "Disney Wish",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2858,
+            "perNight": 953
+          }
+        },
+        {
+          "month": "2026-08",
+          "sailingCount": 19,
+          "medianLowestFare": 3521,
+          "medianPerNight": 800,
+          "cheapest": {
+            "sailDate": "2026-08-21",
+            "ship": "Disney Wish",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2204,
+            "perNight": 735
+          }
+        },
+        {
+          "month": "2026-09",
+          "sailingCount": 15,
+          "medianLowestFare": 2724,
+          "medianPerNight": 602,
+          "cheapest": {
+            "sailDate": "2026-09-11",
+            "ship": "Disney Wish",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2258,
+            "perNight": 753
+          }
+        },
+        {
+          "month": "2026-10",
+          "sailingCount": 35,
+          "medianLowestFare": 2450,
+          "medianPerNight": 557,
+          "cheapest": {
+            "sailDate": "2026-10-18",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1549,
+            "perNight": 387
+          }
+        },
+        {
+          "month": "2026-11",
+          "sailingCount": 34,
+          "medianLowestFare": 2745,
+          "medianPerNight": 630,
+          "cheapest": {
+            "sailDate": "2026-11-05",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1553,
+            "perNight": 388
+          }
+        },
+        {
+          "month": "2026-12",
+          "sailingCount": 45,
+          "medianLowestFare": 2830,
+          "medianPerNight": 657,
+          "cheapest": {
+            "sailDate": "2026-12-15",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1341,
+            "perNight": 447
+          }
+        },
+        {
+          "month": "2027-01",
+          "sailingCount": 49,
+          "medianLowestFare": 2068,
+          "medianPerNight": 506,
+          "cheapest": {
+            "sailDate": "2027-01-22",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1232,
+            "perNight": 411
+          }
+        },
+        {
+          "month": "2027-02",
+          "sailingCount": 42,
+          "medianLowestFare": 2622,
+          "medianPerNight": 602,
+          "cheapest": {
+            "sailDate": "2027-02-19",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1228,
+            "perNight": 409
+          }
+        },
+        {
+          "month": "2027-03",
+          "sailingCount": 50,
+          "medianLowestFare": 3062,
+          "medianPerNight": 745,
+          "cheapest": {
+            "sailDate": "2027-03-05",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Fort Lauderdale",
+            "price": 1523,
+            "perNight": 508
+          }
+        },
+        {
+          "month": "2027-04",
+          "sailingCount": 42,
+          "medianLowestFare": 3015,
+          "medianPerNight": 693,
+          "cheapest": {
+            "sailDate": "2027-04-19",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1882,
+            "perNight": 471
+          }
+        },
+        {
+          "month": "2027-05",
+          "sailingCount": 30,
+          "medianLowestFare": 3257,
+          "medianPerNight": 708,
+          "cheapest": {
+            "sailDate": "2027-05-06",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1731,
+            "perNight": 433
+          }
+        },
+        {
+          "month": "2027-06",
+          "sailingCount": 23,
+          "medianLowestFare": 4172,
+          "medianPerNight": 885,
+          "cheapest": {
+            "sailDate": "2027-06-04",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2615,
+            "perNight": 872
+          }
+        },
+        {
+          "month": "2027-07",
+          "sailingCount": 25,
+          "medianLowestFare": 4092,
+          "medianPerNight": 889,
+          "cheapest": {
+            "sailDate": "2027-07-30",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2657,
+            "perNight": 886
+          }
+        },
+        {
+          "month": "2027-08",
+          "sailingCount": 25,
+          "medianLowestFare": 3049,
+          "medianPerNight": 696,
+          "cheapest": {
+            "sailDate": "2027-08-27",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2063,
+            "perNight": 688
+          }
+        },
+        {
+          "month": "2027-09",
+          "sailingCount": 32,
+          "medianLowestFare": 2490,
+          "medianPerNight": 616,
+          "cheapest": {
+            "sailDate": "2027-09-30",
+            "ship": "Disney Magic",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1776,
+            "perNight": 592
+          }
+        },
+        {
+          "month": "2027-10",
+          "sailingCount": 47,
+          "medianLowestFare": 2726,
+          "medianPerNight": 644,
+          "cheapest": {
+            "sailDate": "2027-10-01",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1797,
+            "perNight": 599
+          }
+        },
+        {
+          "month": "2027-11",
+          "sailingCount": 42,
+          "medianLowestFare": 3090,
+          "medianPerNight": 699,
+          "cheapest": {
+            "sailDate": "2027-11-12",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1839,
+            "perNight": 613
+          }
+        },
+        {
+          "month": "2027-12",
+          "sailingCount": 47,
+          "medianLowestFare": 3570,
+          "medianPerNight": 806,
+          "cheapest": {
+            "sailDate": "2027-12-10",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Fort Lauderdale",
+            "price": 2002,
+            "perNight": 667
+          }
+        },
+        {
+          "month": "2028-01",
+          "sailingCount": 54,
+          "medianLowestFare": 2362,
+          "medianPerNight": 597,
+          "cheapest": {
+            "sailDate": "2028-01-07",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "Fort Lauderdale",
+            "price": 1690,
+            "perNight": 563
+          }
+        },
+        {
+          "month": "2028-02",
+          "sailingCount": 51,
+          "medianLowestFare": 2680,
+          "medianPerNight": 658,
+          "cheapest": {
+            "sailDate": "2028-02-01",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1401,
+            "perNight": 467
+          }
+        },
+        {
+          "month": "2028-03",
+          "sailingCount": 54,
+          "medianLowestFare": 3311,
+          "medianPerNight": 771,
+          "cheapest": {
+            "sailDate": "2028-03-13",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1497,
+            "perNight": 499
+          }
+        },
+        {
+          "month": "2028-04",
+          "sailingCount": 44,
+          "medianLowestFare": 3341,
+          "medianPerNight": 760,
+          "cheapest": {
+            "sailDate": "2028-04-21",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "San Diego",
+            "price": 1833,
+            "perNight": 611
+          }
+        },
+        {
+          "month": "2028-05",
+          "sailingCount": 6,
+          "medianLowestFare": 3032,
+          "medianPerNight": 650,
+          "cheapest": {
+            "sailDate": "2028-05-04",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "San Diego",
+            "price": 1657,
+            "perNight": 414
+          }
+        }
+      ]
+    },
+    "singapore": {
+      "label": "Singapore / Disney Adventure",
+      "sailingCount": 188,
+      "months": [
+        {
+          "month": "2026-03",
+          "sailingCount": 5,
+          "medianLowestFare": 2350,
+          "medianPerNight": 754,
+          "cheapest": {
+            "sailDate": "2026-03-10",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Port Canaveral",
+            "price": 2120,
+            "perNight": 707
+          }
+        },
+        {
+          "month": "2026-04",
+          "sailingCount": 9,
+          "medianLowestFare": 1966,
+          "medianPerNight": 504,
+          "cheapest": {
+            "sailDate": "2026-04-06",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "",
+            "price": 1288,
+            "perNight": 429
+          }
+        },
+        {
+          "month": "2026-05",
+          "sailingCount": 8,
+          "medianLowestFare": 1537,
+          "medianPerNight": 479,
+          "cheapest": {
+            "sailDate": "2026-05-11",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1414,
+            "perNight": 471
+          }
+        },
+        {
+          "month": "2026-06",
+          "sailingCount": 9,
+          "medianLowestFare": 1878,
+          "medianPerNight": 516,
+          "cheapest": {
+            "sailDate": "2026-06-22",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1504,
+            "perNight": 501
+          }
+        },
+        {
+          "month": "2026-07",
+          "sailingCount": 9,
+          "medianLowestFare": 1622,
+          "medianPerNight": 422,
+          "cheapest": {
+            "sailDate": "2026-07-20",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1456,
+            "perNight": 485
+          }
+        },
+        {
+          "month": "2026-08",
+          "sailingCount": 9,
+          "medianLowestFare": 1750,
+          "medianPerNight": 511,
+          "cheapest": {
+            "sailDate": "2026-08-10",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1258,
+            "perNight": 419
+          }
+        },
+        {
+          "month": "2026-09",
+          "sailingCount": 8,
+          "medianLowestFare": 1587,
+          "medianPerNight": 449,
+          "cheapest": {
+            "sailDate": "2026-09-14",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "",
+            "price": 1334,
+            "perNight": 445
+          }
+        },
+        {
+          "month": "2026-10",
+          "sailingCount": 9,
+          "medianLowestFare": 1523,
+          "medianPerNight": 413,
+          "cheapest": {
+            "sailDate": "2026-10-19",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "",
+            "price": 1240,
+            "perNight": 413
+          }
+        },
+        {
+          "month": "2026-11",
+          "sailingCount": 9,
+          "medianLowestFare": 1354,
+          "medianPerNight": 385,
+          "cheapest": {
+            "sailDate": "2026-11-30",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1142,
+            "perNight": 381
+          }
+        },
+        {
+          "month": "2026-12",
+          "sailingCount": 9,
+          "medianLowestFare": 1742,
+          "medianPerNight": 575,
+          "cheapest": {
+            "sailDate": "2026-12-07",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1508,
+            "perNight": 503
+          }
+        },
+        {
+          "month": "2027-01",
+          "sailingCount": 8,
+          "medianLowestFare": 1138,
+          "medianPerNight": 321,
+          "cheapest": {
+            "sailDate": "2027-01-18",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 884,
+            "perNight": 295
+          }
+        },
+        {
+          "month": "2027-02",
+          "sailingCount": 8,
+          "medianLowestFare": 1210,
+          "medianPerNight": 346,
+          "cheapest": {
+            "sailDate": "2027-02-01",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1016,
+            "perNight": 339
+          }
+        },
+        {
+          "month": "2027-03",
+          "sailingCount": 9,
+          "medianLowestFare": 1179,
+          "medianPerNight": 321,
+          "cheapest": {
+            "sailDate": "2027-03-01",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 902,
+            "perNight": 301
+          }
+        },
+        {
+          "month": "2027-04",
+          "sailingCount": 9,
+          "medianLowestFare": 1508,
+          "medianPerNight": 386,
+          "cheapest": {
+            "sailDate": "2027-04-05",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1158,
+            "perNight": 386
+          }
+        },
+        {
+          "month": "2027-05",
+          "sailingCount": 9,
+          "medianLowestFare": 1407,
+          "medianPerNight": 387,
+          "cheapest": {
+            "sailDate": "2027-05-10",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1158,
+            "perNight": 386
+          }
+        },
+        {
+          "month": "2027-06",
+          "sailingCount": 8,
+          "medianLowestFare": 1473,
+          "medianPerNight": 416,
+          "cheapest": {
+            "sailDate": "2027-06-28",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1247,
+            "perNight": 416
+          }
+        },
+        {
+          "month": "2027-07",
+          "sailingCount": 9,
+          "medianLowestFare": 1597,
+          "medianPerNight": 415,
+          "cheapest": {
+            "sailDate": "2027-07-05",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1274,
+            "perNight": 425
+          }
+        },
+        {
+          "month": "2027-08",
+          "sailingCount": 9,
+          "medianLowestFare": 1274,
+          "medianPerNight": 415,
+          "cheapest": {
+            "sailDate": "2027-08-23",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1225,
+            "perNight": 408
+          }
+        },
+        {
+          "month": "2027-09",
+          "sailingCount": 9,
+          "medianLowestFare": 1537,
+          "medianPerNight": 394,
+          "cheapest": {
+            "sailDate": "2027-09-13",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1181,
+            "perNight": 394
+          }
+        },
+        {
+          "month": "2027-10",
+          "sailingCount": 8,
+          "medianLowestFare": 1431,
+          "medianPerNight": 394,
+          "cheapest": {
+            "sailDate": "2027-10-11",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1181,
+            "perNight": 394
+          }
+        },
+        {
+          "month": "2027-11",
+          "sailingCount": 9,
+          "medianLowestFare": 1307,
+          "medianPerNight": 394,
+          "cheapest": {
+            "sailDate": "2027-11-01",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1181,
+            "perNight": 394
+          }
+        },
+        {
+          "month": "2027-12",
+          "sailingCount": 9,
+          "medianLowestFare": 1741,
+          "medianPerNight": 466,
+          "cheapest": {
+            "sailDate": "2027-12-06",
+            "ship": "Disney Adventure",
+            "nights": 3,
+            "homeport": "Singapore",
+            "price": 1331,
+            "perNight": 444
+          }
+        }
+      ]
+    },
+    "other": {
+      "label": "Other homeports",
+      "sailingCount": 218,
+      "months": [
+        {
+          "month": "2026-01",
+          "sailingCount": 22,
+          "medianLowestFare": 2423,
+          "medianPerNight": 543,
+          "cheapest": {
+            "sailDate": "2026-01-23",
+            "ship": "Disney Dream",
+            "nights": 3,
+            "homeport": "",
+            "price": 1384,
+            "perNight": 461
+          }
+        },
+        {
+          "month": "2026-02",
+          "sailingCount": 19,
+          "medianLowestFare": 2116,
+          "medianPerNight": 518,
+          "cheapest": {
+            "sailDate": "2026-02-26",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "Vancouver",
+            "price": 1441,
+            "perNight": 360
+          }
+        },
+        {
+          "month": "2026-03",
+          "sailingCount": 1,
+          "medianLowestFare": 3296,
+          "medianPerNight": 824,
+          "cheapest": {
+            "sailDate": "2026-03-11",
+            "ship": "Disney Magic",
+            "nights": 4,
+            "homeport": "",
+            "price": 3296,
+            "perNight": 824
+          }
+        },
+        {
+          "month": "2026-05",
+          "sailingCount": 9,
+          "medianLowestFare": 4323,
+          "medianPerNight": 639,
+          "cheapest": {
+            "sailDate": "2026-05-16",
+            "ship": "Disney Magic",
+            "nights": 5,
+            "homeport": "Vancouver",
+            "price": 3791,
+            "perNight": 758
+          }
+        },
+        {
+          "month": "2026-06",
+          "sailingCount": 12,
+          "medianLowestFare": 4566,
+          "medianPerNight": 652,
+          "cheapest": {
+            "sailDate": "2026-06-29",
+            "ship": "Disney Wonder",
+            "nights": 7,
+            "homeport": "Vancouver",
+            "price": 4167,
+            "perNight": 595
+          }
+        },
+        {
+          "month": "2026-07",
+          "sailingCount": 13,
+          "medianLowestFare": 4755,
+          "medianPerNight": 679,
+          "cheapest": {
+            "sailDate": "2026-07-09",
+            "ship": "Disney Magic",
+            "nights": 7,
+            "homeport": "Vancouver",
+            "price": 3679,
+            "perNight": 526
+          }
+        },
+        {
+          "month": "2026-08",
+          "sailingCount": 23,
+          "medianLowestFare": 4166,
+          "medianPerNight": 849,
+          "cheapest": {
+            "sailDate": "2026-08-31",
+            "ship": "Disney Wish",
+            "nights": 4,
+            "homeport": "",
+            "price": 2265,
+            "perNight": 566
+          }
+        },
+        {
+          "month": "2026-09",
+          "sailingCount": 24,
+          "medianLowestFare": 2716,
+          "medianPerNight": 643,
+          "cheapest": {
+            "sailDate": "2026-09-28",
+            "ship": "Disney Magic",
+            "nights": 3,
+            "homeport": "",
+            "price": 1635,
+            "perNight": 545
+          }
+        },
+        {
+          "month": "2026-10",
+          "sailingCount": 12,
+          "medianLowestFare": 2482,
+          "medianPerNight": 650,
+          "cheapest": {
+            "sailDate": "2026-10-19",
+            "ship": "Disney Dream",
+            "nights": 4,
+            "homeport": "",
+            "price": 1820,
+            "perNight": 455
+          }
+        },
+        {
+          "month": "2026-11",
+          "sailingCount": 16,
+          "medianLowestFare": 2535,
+          "medianPerNight": 552,
+          "cheapest": {
+            "sailDate": "2026-11-02",
+            "ship": "Disney Wonder",
+            "nights": 3,
+            "homeport": "",
+            "price": 1269,
+            "perNight": 423
+          }
+        },
+        {
+          "month": "2026-12",
+          "sailingCount": 2,
+          "medianLowestFare": 5421,
+          "medianPerNight": 936,
+          "cheapest": {
+            "sailDate": "2026-12-12",
+            "ship": "Disney Dream",
+            "nights": 7,
+            "homeport": "",
+            "price": 5186,
+            "perNight": 741
+          }
+        },
+        {
+          "month": "2027-04",
+          "sailingCount": 1,
+          "medianLowestFare": 5186,
+          "medianPerNight": 399,
+          "cheapest": {
+            "sailDate": "2027-04-25",
+            "ship": "Disney Wish",
+            "nights": 13,
+            "homeport": "",
+            "price": 5186,
+            "perNight": 399
+          }
+        },
+        {
+          "month": "2027-05",
+          "sailingCount": 9,
+          "medianLowestFare": 3969,
+          "medianPerNight": 567,
+          "cheapest": {
+            "sailDate": "2027-05-20",
+            "ship": "Disney Magic",
+            "nights": 7,
+            "homeport": "Vancouver",
+            "price": 3395,
+            "perNight": 485
+          }
+        },
+        {
+          "month": "2027-06",
+          "sailingCount": 11,
+          "medianLowestFare": 4501,
+          "medianPerNight": 643,
+          "cheapest": {
+            "sailDate": "2027-06-03",
+            "ship": "Disney Magic",
+            "nights": 7,
+            "homeport": "Vancouver",
+            "price": 4039,
+            "perNight": 577
+          }
+        },
+        {
+          "month": "2027-07",
+          "sailingCount": 16,
+          "medianLowestFare": 4654,
+          "medianPerNight": 697,
+          "cheapest": {
+            "sailDate": "2027-07-30",
+            "ship": "Disney Magic",
+            "nights": 6,
+            "homeport": "Vancouver",
+            "price": 3885,
+            "perNight": 648
+          }
+        },
+        {
+          "month": "2027-08",
+          "sailingCount": 16,
+          "medianLowestFare": 3990,
+          "medianPerNight": 612,
+          "cheapest": {
+            "sailDate": "2027-08-20",
+            "ship": "Disney Wish",
+            "nights": 3,
+            "homeport": "Southampton",
+            "price": 3410,
+            "perNight": 1137
+          }
+        },
+        {
+          "month": "2027-09",
+          "sailingCount": 9,
+          "medianLowestFare": 3871,
+          "medianPerNight": 553,
+          "cheapest": {
+            "sailDate": "2027-09-20",
+            "ship": "Disney Wonder",
+            "nights": 4,
+            "homeport": "Vancouver",
+            "price": 1716,
+            "perNight": 429
+          }
+        },
+        {
+          "month": "2027-11",
+          "sailingCount": 1,
+          "medianLowestFare": 2704,
+          "medianPerNight": 541,
+          "cheapest": {
+            "sailDate": "2027-11-28",
+            "ship": "Disney Fantasy",
+            "nights": 5,
+            "homeport": "Port Canaveral ending San Juan",
+            "price": 2704,
+            "perNight": 541
+          }
+        },
+        {
+          "month": "2027-12",
+          "sailingCount": 1,
+          "medianLowestFare": 6444,
+          "medianPerNight": 1289,
+          "cheapest": {
+            "sailDate": "2027-12-18",
+            "ship": "Disney Believe",
+            "nights": 5,
+            "homeport": "",
+            "price": 6444,
+            "perNight": 1289
+          }
+        },
+        {
+          "month": "2028-04",
+          "sailingCount": 1,
+          "medianLowestFare": 3299,
+          "medianPerNight": 550,
+          "cheapest": {
+            "sailDate": "2028-04-23",
+            "ship": "Disney Fantasy",
+            "nights": 6,
+            "homeport": "Fort Lauderdale ending San Juan",
+            "price": 3299,
+            "perNight": 550
+          }
+        }
+      ]
+    }
+  },
+  "ships": [
+    {
+      "ship": "Disney Magic",
+      "region": "us",
+      "sailingCount": 88,
+      "medianLowestFare": 2387,
+      "medianPerNight": 479
+    },
+    {
+      "ship": "Disney Wonder",
+      "region": "us",
+      "sailingCount": 119,
+      "medianLowestFare": 1950,
+      "medianPerNight": 500
+    },
+    {
+      "ship": "Disney Fantasy",
+      "region": "us",
+      "sailingCount": 158,
+      "medianLowestFare": 3259,
+      "medianPerNight": 664
+    },
+    {
+      "ship": "Disney Dream",
+      "region": "us",
+      "sailingCount": 172,
+      "medianLowestFare": 2388,
+      "medianPerNight": 685
+    },
+    {
+      "ship": "Disney Treasure",
+      "region": "us",
+      "sailingCount": 115,
+      "medianLowestFare": 4844,
+      "medianPerNight": 695
+    },
+    {
+      "ship": "Disney Destiny",
+      "region": "us",
+      "sailingCount": 160,
+      "medianLowestFare": 3532,
+      "medianPerNight": 750
+    },
+    {
+      "ship": "Disney Believe",
+      "region": "us",
+      "sailingCount": 28,
+      "medianLowestFare": 3632,
+      "medianPerNight": 760
+    },
+    {
+      "ship": "Disney Wish",
+      "region": "us",
+      "sailingCount": 169,
+      "medianLowestFare": 2798,
+      "medianPerNight": 813
+    },
+    {
+      "ship": "Disney Adventure",
+      "region": "singapore",
+      "sailingCount": 188,
+      "medianLowestFare": 1534,
+      "medianPerNight": 421
+    },
+    {
+      "ship": "Disney Treasure",
+      "region": "other",
+      "sailingCount": 4,
+      "medianLowestFare": 3672,
+      "medianPerNight": 525
+    },
+    {
+      "ship": "Disney Magic",
+      "region": "other",
+      "sailingCount": 54,
+      "medianLowestFare": 3838,
+      "medianPerNight": 573
+    },
+    {
+      "ship": "Disney Fantasy",
+      "region": "other",
+      "sailingCount": 16,
+      "medianLowestFare": 2576,
+      "medianPerNight": 599
+    },
+    {
+      "ship": "Disney Wonder",
+      "region": "other",
+      "sailingCount": 45,
+      "medianLowestFare": 4319,
+      "medianPerNight": 617
+    },
+    {
+      "ship": "Disney Destiny",
+      "region": "other",
+      "sailingCount": 16,
+      "medianLowestFare": 3171,
+      "medianPerNight": 717
+    },
+    {
+      "ship": "Disney Wish",
+      "region": "other",
+      "sailingCount": 43,
+      "medianLowestFare": 3280,
+      "medianPerNight": 781
+    },
+    {
+      "ship": "Disney Dream",
+      "region": "other",
+      "sailingCount": 39,
+      "medianLowestFare": 4139,
+      "medianPerNight": 792
+    },
+    {
+      "ship": "Disney Believe",
+      "region": "other",
+      "sailingCount": 1,
+      "medianLowestFare": 6444,
+      "medianPerNight": 1289
+    }
+  ]
+}

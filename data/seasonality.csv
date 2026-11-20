@@ -1,0 +1,71 @@
+region,month,sailing_count,median_lowest_fare,median_per_night,cheapest_ship,cheapest_date,cheapest_nights,cheapest_homeport,cheapest_fare
+us,2026-02,22,3176,703,Disney Magic,2026-02-25,4,Galveston,1576
+us,2026-03,50,2782,641,Disney Dream,2026-03-06,3,Fort Lauderdale,1444
+us,2026-04,44,2633,648,Disney Wonder,2026-04-17,3,San Diego,1484
+us,2026-05,31,3337,727,Disney Wonder,2026-05-07,4,San Diego,1923
+us,2026-06,26,4344,977,Disney Fantasy,2026-06-07,3,Port Canaveral,2517
+us,2026-07,25,4274,946,Disney Wish,2026-07-31,3,Port Canaveral,2858
+us,2026-08,19,3521,800,Disney Wish,2026-08-21,3,Port Canaveral,2204
+us,2026-09,15,2724,602,Disney Wish,2026-09-11,3,Port Canaveral,2258
+us,2026-10,35,2450,557,Disney Wonder,2026-10-18,4,San Diego,1549
+us,2026-11,34,2745,630,Disney Wonder,2026-11-05,4,San Diego,1553
+us,2026-12,45,2830,657,Disney Wonder,2026-12-15,3,San Diego,1341
+us,2027-01,49,2068,506,Disney Wonder,2027-01-22,3,San Diego,1232
+us,2027-02,42,2622,602,Disney Wonder,2027-02-19,3,San Diego,1228
+us,2027-03,50,3062,745,Disney Dream,2027-03-05,3,Fort Lauderdale,1523
+us,2027-04,42,3015,693,Disney Wonder,2027-04-19,4,San Diego,1882
+us,2027-05,30,3257,708,Disney Wonder,2027-05-06,4,San Diego,1731
+us,2027-06,23,4172,885,Disney Dream,2027-06-04,3,Port Canaveral,2615
+us,2027-07,25,4092,889,Disney Dream,2027-07-30,3,Port Canaveral,2657
+us,2027-08,25,3049,696,Disney Dream,2027-08-27,3,Port Canaveral,2063
+us,2027-09,32,2490,616,Disney Magic,2027-09-30,3,San Diego,1776
+us,2027-10,47,2726,644,Disney Wonder,2027-10-01,3,San Diego,1797
+us,2027-11,42,3090,699,Disney Wonder,2027-11-12,3,San Diego,1839
+us,2027-12,47,3570,806,Disney Dream,2027-12-10,3,Fort Lauderdale,2002
+us,2028-01,54,2362,597,Disney Dream,2028-01-07,3,Fort Lauderdale,1690
+us,2028-02,51,2680,658,Disney Wonder,2028-02-01,3,San Diego,1401
+us,2028-03,54,3311,771,Disney Wonder,2028-03-13,3,San Diego,1497
+us,2028-04,44,3341,760,Disney Wonder,2028-04-21,3,San Diego,1833
+us,2028-05,6,3032,650,Disney Wonder,2028-05-04,4,San Diego,1657
+singapore,2026-03,5,2350,754,Disney Adventure,2026-03-10,3,Port Canaveral,2120
+singapore,2026-04,9,1966,504,Disney Adventure,2026-04-06,3,,1288
+singapore,2026-05,8,1537,479,Disney Adventure,2026-05-11,3,Singapore,1414
+singapore,2026-06,9,1878,516,Disney Adventure,2026-06-22,3,Singapore,1504
+singapore,2026-07,9,1622,422,Disney Adventure,2026-07-20,3,Singapore,1456
+singapore,2026-08,9,1750,511,Disney Adventure,2026-08-10,3,Singapore,1258
+singapore,2026-09,8,1587,449,Disney Adventure,2026-09-14,3,,1334
+singapore,2026-10,9,1523,413,Disney Adventure,2026-10-19,3,,1240
+singapore,2026-11,9,1354,385,Disney Adventure,2026-11-30,3,Singapore,1142
+singapore,2026-12,9,1742,575,Disney Adventure,2026-12-07,3,Singapore,1508
+singapore,2027-01,8,1138,321,Disney Adventure,2027-01-18,3,Singapore,884
+singapore,2027-02,8,1210,346,Disney Adventure,2027-02-01,3,Singapore,1016
+singapore,2027-03,9,1179,321,Disney Adventure,2027-03-01,3,Singapore,902
+singapore,2027-04,9,1508,386,Disney Adventure,2027-04-05,3,Singapore,1158
+singapore,2027-05,9,1407,387,Disney Adventure,2027-05-10,3,Singapore,1158
+singapore,2027-06,8,1473,416,Disney Adventure,2027-06-28,3,Singapore,1247
+singapore,2027-07,9,1597,415,Disney Adventure,2027-07-05,3,Singapore,1274
+singapore,2027-08,9,1274,415,Disney Adventure,2027-08-23,3,Singapore,1225
+singapore,2027-09,9,1537,394,Disney Adventure,2027-09-13,3,Singapore,1181
+singapore,2027-10,8,1431,394,Disney Adventure,2027-10-11,3,Singapore,1181
+singapore,2027-11,9,1307,394,Disney Adventure,2027-11-01,3,Singapore,1181
+singapore,2027-12,9,1741,466,Disney Adventure,2027-12-06,3,Singapore,1331
+other,2026-01,22,2423,543,Disney Dream,2026-01-23,3,,1384
+other,2026-02,19,2116,518,Disney Wonder,2026-02-26,4,Vancouver,1441
+other,2026-03,1,3296,824,Disney Magic,2026-03-11,4,,3296
+other,2026-05,9,4323,639,Disney Magic,2026-05-16,5,Vancouver,3791
+other,2026-06,12,4566,652,Disney Wonder,2026-06-29,7,Vancouver,4167
+other,2026-07,13,4755,679,Disney Magic,2026-07-09,7,Vancouver,3679
+other,2026-08,23,4166,849,Disney Wish,2026-08-31,4,,2265
+other,2026-09,24,2716,643,Disney Magic,2026-09-28,3,,1635
+other,2026-10,12,2482,650,Disney Dream,2026-10-19,4,,1820
+other,2026-11,16,2535,552,Disney Wonder,2026-11-02,3,,1269
+other,2026-12,2,5421,936,Disney Dream,2026-12-12,7,,5186
+other,2027-04,1,5186,399,Disney Wish,2027-04-25,13,,5186
+other,2027-05,9,3969,567,Disney Magic,2027-05-20,7,Vancouver,3395
+other,2027-06,11,4501,643,Disney Magic,2027-06-03,7,Vancouver,4039
+other,2027-07,16,4654,697,Disney Magic,2027-07-30,6,Vancouver,3885
+other,2027-08,16,3990,612,Disney Wish,2027-08-20,3,Southampton,3410
+other,2027-09,9,3871,553,Disney Wonder,2027-09-20,4,Vancouver,1716
+other,2027-11,1,2704,541,Disney Fantasy,2027-11-28,5,Port Canaveral ending San Juan,2704
+other,2027-12,1,6444,1289,Disney Believe,2027-12-18,5,,6444
+other,2028-04,1,3299,550,Disney Fantasy,2028-04-23,6,Fort Lauderdale ending San Juan,3299
