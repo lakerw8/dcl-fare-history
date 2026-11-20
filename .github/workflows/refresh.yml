@@ -1,0 +1,150 @@
+name: Refresh fare snapshot
+
+on:
+  schedule:
+    # Tuesday 17:00 UTC, after DCL Guide's Monday tracker refresh.
+    - cron: "0 17 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fare-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download sailings export
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/fare-export
+          curl -fsSL --retry 3 --retry-all-errors \
+            -o /tmp/fare-export/sailings.csv \
+            "https://dclguide.com/data/sailings.csv"
+          curl -fsSL --retry 3 --retry-all-errors \
+            -o /tmp/fare-export/sailings.json \
+            "https://dclguide.com/data/sailings.json"
+
+      - name: Validate export
+        run: |
+          set -euo pipefail
+          python3 - << 'PY'
+          import csv
+          import json
+          import sys
+          from pathlib import Path
+
+          csv_path = Path("/tmp/fare-export/sailings.csv")
+          json_path = Path("/tmp/fare-export/sailings.json")
+
+          def fail(message):
+              print(f"Invalid fare export: {message}", file=sys.stderr)
+              sys.exit(1)
+
+          csv_bytes = csv_path.read_bytes()
+          json_bytes = json_path.read_bytes()
+          if not csv_bytes.strip():
+              fail("sailings.csv is empty")
+          if not json_bytes.strip():
+              fail("sailings.json is empty")
+          if csv_bytes.lstrip().startswith(b"<") or json_bytes.lstrip().startswith(b"<"):
+              fail("download is HTML, not a data file")
+
+          try:
+              catalog = json.loads(json_bytes.decode("utf-8"))
+          except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+              fail(f"sailings.json did not parse: {exc}")
+
+          if not isinstance(catalog, dict):
+              fail("sailings.json must be an object")
+          sailings = catalog.get("sailings")
+          if not isinstance(sailings, list) or len(sailings) == 0:
+              fail("sailings.json has no sailings")
+          updated = catalog.get("updated")
+          if not isinstance(updated, str) or not updated.strip():
+              fail("sailings.json is missing updated")
+
+          required = {
+              "sailDate",
+              "ship",
+              "nights",
+              "homeport",
+              "destination",
+              "inside",
+              "oceanview",
+              "verandah",
+              "concierge",
+              "perNight",
+              "lastUpdated",
+          }
+          for index, row in enumerate(sailings):
+              if not isinstance(row, dict):
+                  fail(f"sailing {index} is not an object")
+              missing = required.difference(row)
+              if missing:
+                  fail(f"sailing {index} is missing {sorted(missing)}")
+              if not isinstance(row["nights"], int) or row["nights"] <= 0:
+                  fail(f"sailing {index} has a bad nights value")
+              if not isinstance(row["perNight"], int):
+                  fail(f"sailing {index} has a bad perNight value")
+
+          try:
+              text = csv_bytes.decode("utf-8")
+          except UnicodeDecodeError as exc:
+              fail(f"sailings.csv is not UTF-8: {exc}")
+          reader = csv.reader(text.splitlines())
+          try:
+              header = next(reader)
+          except StopIteration:
+              fail("sailings.csv has no header")
+          expected = [
+              "sail_date",
+              "ship",
+              "nights",
+              "homeport",
+              "destination",
+              "inside",
+              "oceanview",
+              "verandah",
+              "concierge",
+              "per_night",
+              "last_updated",
+          ]
+          if header[: len(expected)] != expected:
+              fail(f"unexpected CSV header: {header}")
+          data_rows = [row for row in reader if any(cell.strip() for cell in row)]
+          if not data_rows:
+              fail("sailings.csv has no data rows")
+          if len(data_rows) != len(sailings):
+              fail(
+                  f"CSV has {len(data_rows)} rows but JSON has {len(sailings)} sailings"
+              )
+
+          print(f"Valid export: {len(sailings)} sailings, updated {updated}")
+          PY
+
+      - name: Install validated files
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          mv /tmp/fare-export/sailings.csv data/sailings.csv
+          mv /tmp/fare-export/sailings.json data/sailings.json
+
+      - name: Commit snapshot if it changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/sailings.csv data/sailings.json
+          if git diff --cached --quiet; then
+            echo "Sailings export is unchanged. Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh Disney Cruise fare snapshot from DCL Guide"
+          git push
