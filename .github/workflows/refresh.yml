@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download sailings export
+      - name: Download fare exports
         run: |
           set -euo pipefail
           mkdir -p /tmp/fare-export
@@ -30,8 +30,17 @@ jobs:
           curl -fsSL --retry 3 --retry-all-errors \
             -o /tmp/fare-export/sailings.json \
             "https://dclguide.com/data/sailings.json"
+          curl -fsSL --retry 3 --retry-all-errors \
+            -o /tmp/fare-export/seasonality.csv \
+            "https://dclguide.com/data/seasonality.csv"
+          curl -fsSL --retry 3 --retry-all-errors \
+            -o /tmp/fare-export/seasonality.json \
+            "https://dclguide.com/data/seasonality.json"
+          curl -fsSL --retry 3 --retry-all-errors \
+            -o /tmp/fare-export/price-history-summary.json \
+            "https://dclguide.com/data/price-history-summary.json"
 
-      - name: Validate export
+      - name: Validate exports
         run: |
           set -euo pipefail
           python3 - << 'PY'
@@ -40,27 +49,34 @@ jobs:
           import sys
           from pathlib import Path
 
-          csv_path = Path("/tmp/fare-export/sailings.csv")
-          json_path = Path("/tmp/fare-export/sailings.json")
+          base = Path("/tmp/fare-export")
+          sailings_csv = base / "sailings.csv"
+          sailings_json = base / "sailings.json"
+          seasonality_csv = base / "seasonality.csv"
+          seasonality_json = base / "seasonality.json"
+          summary_json = base / "price-history-summary.json"
 
           def fail(message):
               print(f"Invalid fare export: {message}", file=sys.stderr)
               sys.exit(1)
 
-          csv_bytes = csv_path.read_bytes()
-          json_bytes = json_path.read_bytes()
-          if not csv_bytes.strip():
-              fail("sailings.csv is empty")
-          if not json_bytes.strip():
-              fail("sailings.json is empty")
-          if csv_bytes.lstrip().startswith(b"<") or json_bytes.lstrip().startswith(b"<"):
-              fail("download is HTML, not a data file")
+          def read_non_html(path):
+              raw = path.read_bytes()
+              if not raw.strip():
+                  fail(f"{path.name} is empty")
+              if raw.lstrip().startswith(b"<"):
+                  fail(f"{path.name} is HTML, not a data file")
+              return raw
 
-          try:
-              catalog = json.loads(json_bytes.decode("utf-8"))
-          except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-              fail(f"sailings.json did not parse: {exc}")
+          def parse_json(path):
+              raw = read_non_html(path)
+              try:
+                  return json.loads(raw.decode("utf-8"))
+              except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+                  fail(f"{path.name} did not parse: {exc}")
 
+          # 1) Validate sailings.json and sailings.csv
+          catalog = parse_json(sailings_json)
           if not isinstance(catalog, dict):
               fail("sailings.json must be an object")
           sailings = catalog.get("sailings")
@@ -94,8 +110,9 @@ jobs:
               if not isinstance(row["perNight"], int):
                   fail(f"sailing {index} has a bad perNight value")
 
+          sailings_csv_bytes = read_non_html(sailings_csv)
           try:
-              text = csv_bytes.decode("utf-8")
+              text = sailings_csv_bytes.decode("utf-8")
           except UnicodeDecodeError as exc:
               fail(f"sailings.csv is not UTF-8: {exc}")
           reader = csv.reader(text.splitlines())
@@ -117,33 +134,95 @@ jobs:
               "last_updated",
           ]
           if header[: len(expected)] != expected:
-              fail(f"unexpected CSV header: {header}")
+              fail(f"unexpected sailings.csv header: {header}")
           data_rows = [row for row in reader if any(cell.strip() for cell in row)]
           if not data_rows:
               fail("sailings.csv has no data rows")
           if len(data_rows) != len(sailings):
               fail(
-                  f"CSV has {len(data_rows)} rows but JSON has {len(sailings)} sailings"
+                  f"sailings.csv has {len(data_rows)} rows but sailings.json has {len(sailings)} sailings"
               )
 
-          print(f"Valid export: {len(sailings)} sailings, updated {updated}")
+          # 2) Validate seasonality.json and seasonality.csv
+          seasonality = parse_json(seasonality_json)
+          if not isinstance(seasonality, dict):
+              fail("seasonality.json must be an object")
+          regions = seasonality.get("regions")
+          if not isinstance(regions, dict):
+              fail("seasonality.json is missing regions")
+          for key in ("us", "singapore", "other"):
+              reg = regions.get(key)
+              if not isinstance(reg, dict):
+                  fail(f"seasonality.json is missing regions.{key}")
+              months = reg.get("months")
+              if not isinstance(months, list) or len(months) == 0:
+                  fail(f"seasonality.json regions.{key}.months is empty")
+
+          seasonality_csv_bytes = read_non_html(seasonality_csv)
+          try:
+              seas_text = seasonality_csv_bytes.decode("utf-8")
+          except UnicodeDecodeError as exc:
+              fail(f"seasonality.csv is not UTF-8: {exc}")
+          seas_reader = csv.reader(seas_text.splitlines())
+          try:
+              seas_header = next(seas_reader)
+          except StopIteration:
+              fail("seasonality.csv has no header")
+          if seas_header[:2] != ["region", "month"]:
+              fail(f"unexpected seasonality.csv header: {seas_header}")
+          seas_rows = [row for row in seas_reader if any(cell.strip() for cell in row)]
+          if not seas_rows:
+              fail("seasonality.csv has no data rows")
+
+          # 3) Validate price-history-summary.json (input for movers script; not committed)
+          summary = parse_json(summary_json)
+          if not isinstance(summary, dict):
+              fail("price-history-summary.json must be an object")
+          snap_count = summary.get("snapshotCount")
+          if not isinstance(snap_count, int) or snap_count <= 0:
+              fail("price-history-summary.json has invalid snapshotCount")
+          hist_sailings = summary.get("sailings")
+          if not isinstance(hist_sailings, dict) or len(hist_sailings) == 0:
+              fail("price-history-summary.json has empty sailings")
+
+          print(
+              f"Valid exports: {len(sailings)} sailings (updated {updated}), "
+              f"{len(seas_rows)} seasonality rows ({len(regions['us']['months'])} US / "
+              f"{len(regions['singapore']['months'])} Singapore / {len(regions['other']['months'])} other months), "
+              f"{len(hist_sailings)} history sailings across {snap_count} snapshots"
+          )
           PY
 
-      - name: Install validated files
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build price movers and install validated files
         run: |
           set -euo pipefail
           mkdir -p data
+          node scripts/build-movers.mjs \
+            /tmp/fare-export/price-history-summary.json \
+            data/price-movers.json
           mv /tmp/fare-export/sailings.csv data/sailings.csv
           mv /tmp/fare-export/sailings.json data/sailings.json
+          mv /tmp/fare-export/seasonality.csv data/seasonality.csv
+          mv /tmp/fare-export/seasonality.json data/seasonality.json
 
       - name: Commit snapshot if it changed
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/sailings.csv data/sailings.json
+          git add -- \
+            data/sailings.csv \
+            data/sailings.json \
+            data/seasonality.csv \
+            data/seasonality.json \
+            data/price-movers.json
           if git diff --cached --quiet; then
-            echo "Sailings export is unchanged. Nothing to commit."
+            echo "Fare exports are unchanged. Nothing to commit."
             exit 0
           fi
           git commit -m "Refresh Disney Cruise fare snapshot from DCL Guide"
